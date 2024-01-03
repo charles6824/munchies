@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@300;500&display=swap);
+@import url(https://db.onlinewebfonts.com/c/35c212863ef35199e58e084a2c8e3286?family=Agency);
+@import url(https://db.onlinewebfonts.com/c/2967a3c5ee426de27b245bcbc22ab82f?family=Noto+Sans+V2);
+* {
+  /* font-weight: 100 !important; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.segio{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  overscroll-behavior: none;
+  height: 100vh;
+}
+.contain {
+  overscroll-behavior: none;
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.my-div{
+  overflow: hidden;
+  transition: height 2s ease;
+  height: 100vh;
+  background: rgba(8, 8, 8, 0.568);
+}
