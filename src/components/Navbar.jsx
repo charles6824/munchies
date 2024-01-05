@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { IoSearchOutline } from "react-icons/io5";
@@ -10,14 +10,31 @@ import Header from "./Header";
 const Navbar = () => {
 
     const [show, setShow] = useState(false)
+    const [show2, setShow2] = useState(false)
 
-  const url = ["Events", "Shop", "Q&A", "Foundation", "About"];
+  const url = ["Events", "Book", "Q&A", "Foundation", "About"];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      console.log("object", scrollPosition)
+      setShow2(scrollPosition > 150);
+      console.log(show2)
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [show2])
+
   return (
     <div className={`relative ${show ? 'h-[100vh] overflow-hidden ' : 'h-fit'}`}>
-<Header onclick={()=> setShow(!show)}/>
+<Header onclick={()=> setShow(!show)} className={show2 ? "hidden": "block"} />
         
       {/* Desktop navbar */}
-      <nav className="md:flex items-center justify-between px-[4vw] py-[1vw] hidden ">
+      <nav className={show2 ? `sticky top-0 z-50 md:flex items-center justify-between px-[4vw] py-[0vw]` : `md:flex items-center justify-between px-[4vw] py-[0vw] hidden`} >
         <Link to={"/"}>
           <img
             src={require("../assets/Navlogo.jpg")}
@@ -27,9 +44,9 @@ const Navbar = () => {
           />
         </Link>
 
-        <ul className="font-poppins font-[350] text-[1.3vw] flex gap-[3vw] mt-[4vw] ">
-          {url.map((link) => (
-            <li className=" hover:underline hover:transition-underline hover:duration-300">
+        <ul className="font-poppins font-[350] text-[1.3vw] flex gap-[3vw] mt-[0vw] ">
+          {url.map((link, i) => (
+            <li key={i} className="hover:text-[#4378F5] hover:duration-300">
               <Link>{link}</Link>
             </li>
           ))}
@@ -55,8 +72,8 @@ const Navbar = () => {
         </Link>
 
         <ul className="font-poppins font-[350] text-[6vw] flex-col justify-center text-center  space-y-[6vw] mt-[4vw] ">
-          {url.map((link) => (
-            <li className=" hover:underline hover:transition-underline hover:duration-300">
+          {url.map((link, i) => (
+            <li className=" hover:underline hover:transition-underline hover:duration-300" key={i}>
               <Link>{link}</Link>
             </li>
           ))}

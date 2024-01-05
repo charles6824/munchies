@@ -10,26 +10,261 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-.segio{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins";
 }
 
-body {
-  overscroll-behavior: none;
-  height: 100vh;
-}
-.contain {
-  overscroll-behavior: none;
-  width: 600%;
-  height: 100%;
-  display: flex;
-  flex-wrap: nowrap;
+.left h2{
+  font-size: 30px;
+  font-weight: 800;
+  padding-bottom: 5px;
 }
 
-.my-div{
+.test{
+  display: inline !important;
+}
+
+.event img{
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+
+.event h3{
+  font-size: 24px;
+  font-weight: 600;
+  
+}
+
+.give-away h3{
+  font-size: 24px;
+}
+
+.about h2{
+  font-size: 38px;
+  font-weight: 700;
+  color: white;
+  padding-bottom: 35px;
+}
+
+.about p{
+  color: white;
+  line-height: 35px;
+  padding-bottom: 20px;
+}
+
+
+
+.about .btn-podcast{
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.about .btn-podcast:hover{
+  background: white;
+  color: black;
+}
+
+.trend img{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.trend-row h2{
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px 0 12px;
+}
+
+.trend-row span{
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.trend-row h4{
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+.trend-row .btn-watch{
+  background-color: #4378f5;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.host .title{
+  font-size: 40px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.host .title::before{
+  content: "";
+  position: absolute;
+  background-color: #4378f5;
+  width: 180px;
+  height: 5px;
+  top: 49px;
+}
+
+.host h5{
+  color: white;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.host p{
+  color: white;
+  padding-bottom: 40px;
+  line-height: 30px;
+  font-weight: lighter !important;
+}
+
+.muted{
+  color: #ccc;
+}
+
+.contact h2{
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+
+.contact .text1{
+  padding-bottom: 15px;
+  font-size: 15px;
+}
+
+.contact .text-s{
+  font-size: 14px;
+}
+
+.contact label{
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.contact input{
+  background-color: #d0d3d6;
+}
+.contact textarea{
+  background-color: #d0d3d6;
+}
+
+.foundation h2{
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  padding-bottom: 40px;
+  color: white;
+}
+
+.foundation p{
+  line-height: 32px;
+  padding-bottom: 20px  ;
+  color: white;
+}
+
+.foundation .text{
+  padding-bottom: 40px;
+  color: white;
+}
+
+.foundation .pix{
+  width: 450px;
+  height: 450px;
+  margin: auto;
   overflow: hidden;
-  transition: height 2s ease;
-  height: 100vh;
-  background: rgba(8, 8, 8, 0.568);
+}
+
+
+
+.foundation .pix img{
+  height: 100%;
+  object-fit: cover;
+}
+
+.foundation .image h3{
+  font-size: 28px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+.foundation .image h6{
+
+}
+
+.foundation .image p{
+  font-size: 14px;
+  font-weight: lighter !important;
+  line-height: 20px;
+}
+
+.contacts .title{
+  padding-bottom: 20px;
+  font-size: 35px;
+  font-weight: 600;
+  position: relative;
+  width: 250px;
+  margin: auto;
+}
+
+.contacts .title::before{
+  content: "";
+  width: 180px;
+  height: 5px;
+  background-color: #4378f5;
+  position: absolute;
+  bottom: 15px;
+  left: 37px;
+}
+
+.footer .pix{
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.footer .pix img{
+  height: 100%;
+  object-fit: cover;
+}
+
+@media(max-width: 576px){
+  .foundation .pix{
+    width: 250px;
+    height: 250px;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .give-away h3{
+    font-size: 14px;
+  }
+
+  .shop{
+    font-size: 12px;
+    width: 90px;
+    height: 25px;
+    margin-top: 10px;
+  }
+
+  .trend h2{
+    font-size: 25px;
+  }
+  .trend p{
+    font-size: 12px;
+  }
+
+  .right h4{
+    width: 90px;
+  }
 }

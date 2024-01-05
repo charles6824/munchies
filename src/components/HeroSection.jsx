@@ -1,15 +1,45 @@
-import React from "react";
+import {useState, useEffect} from "react";
 
 const HeroSection = () => {
+
+
+  const calculateTimeLeft = () => {
+    const now = new Date();
+    const difference = new Date("2024-01-23T00:00:00") - now;
+
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((difference % (1000 * 60)) / 1000),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
   return (
     <div
       style={{
-        backgroundImage: `url(${require("../assets/pexels-max-rahubovskiy-7018400.jpg")})`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(${require("../assets/hero-bg.jpg")})`,
+        // backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(${require("../assets/hero-bg.jpg")})`,
+        backgroundPosition: "top center",
         backgroundSize: "cover",
+        aspectRatio: "16/9"
       }}
-      className="w-[100%] h-[80vh] overflow-hidden  p-[2rem] md:p-[5.5rem] flex  items-start justify-between flex-col  "
+      className="w-[100%] h-[100vh] overflow-hidden  p-[2rem] md:p-[5.5rem] flex  items-start justify-between flex-col  "
     >
       <h1 className="text-white  font-[800] text-[70px] md:text-[105px] leading-none md:leading-[7vw] font-poppins   shadow-black drop-shadow-2xl">
         Live <br /> Audience
@@ -19,35 +49,43 @@ const HeroSection = () => {
         <p className="text-white text-[22px] font-poppins">
           Munchies and Thoughts Podcast
         </p>
-        <button className="  rounded-[1vw] bg-[#F6D95C] text-black w-[27vw] md:w-[10vw] font-poppins md
-        :py-[0.8vw] py-[2vw]">
+        <button className="  rounded-[1vw] bg-[#F6D95C] text-black w-[27vw] md:w-[15vw] font-poppins md
+        :py-[0.5vw] py-[2vw]">
          BUY TICKET
         </button>
       </div>
 
       <div className="flex gap-[3vw] md:gap-[1vw] font-poppins ">
-        <div className="bg-[#4378F5] text-white flex flex-col items-center w-[25vw] md:w-[12vw] leading-tight rounded-[1.5vw] text-center uppercase py-[0.2vw] shadow-black drop-shadow-xl">
-          <h1 className=" text-[25px] md:text-[45px] font-[800] drop-shadow-xl stroke-black  shadow-black">
-            130
+        <div className="bg-[#4378F5] text-white flex flex-col items-center w-[20vw] md:w-[12vw] leading-tight rounded-[1.5vw] text-center uppercase py-[0.2vw] shadow-black drop-shadow-xl">
+          <h1 className=" text-[20px] md:text-[45px] font-[800] drop-shadow-xl stroke-black  shadow-black">
+            {timeLeft.days}
           </h1>
-          <p className="md:text-[20px] text-[15px] font-[500] drop-shadow-xl stroke-black  shadow-black">
+          <p className="md:text-[18px] text-[15px] font-[500] drop-shadow-xl stroke-black  shadow-black">
             days
           </p>
         </div>
-        <div className="bg-[#4378F5] flex flex-col items-center text-white w-[25vw] md:w-[12vw] leading-tight rounded-[1.5vw] text-center uppercase py-[0.2vw] shadow-black drop-shadow-xl">
-          <h1 className="text-[25px] md:text-[45px] font-[800] drop-shadow-xl stroke-black  shadow-black">
-            23
+        <div className="bg-[#4378F5] flex flex-col items-center text-white w-[20vw] md:w-[12vw] leading-tight rounded-[1.5vw] text-center uppercase py-[0.2vw] shadow-black drop-shadow-xl">
+          <h1 className="text-[20px] md:text-[45px] font-[800] drop-shadow-xl stroke-black  shadow-black">
+            {timeLeft.hours}
           </h1>
-          <p className="md:text-[20px] text-[15px] font-[500] drop-shadow-xl stroke-black  shadow-black">
+          <p className="md:text-[18px] text-[15px] font-[500] drop-shadow-xl stroke-black  shadow-black">
             hours
           </p>
         </div>
-        <div className="bg-[#4378F5] text-white w-[25vw] md:w-[12vw] leading-tight rounded-[1.5vw] text-center uppercase py-[0.2vw] shadow-black drop-shadow-xl">
-          <h1 className="text-[25px] md:text-[45px] font-[800] drop-shadow-xl stroke-black  shadow-black">
-            30
+        <div className="bg-[#4378F5] text-white w-[20vw] md:w-[12vw] leading-tight rounded-[1.5vw] text-center uppercase py-[0.2vw] shadow-black drop-shadow-xl">
+          <h1 className="text-[20px] md:text-[45px] font-[800] drop-shadow-xl stroke-black  shadow-black">
+            {timeLeft.minutes}
           </h1>
-          <p className="md:text-[20px] text-[15px] font-[500] drop-shadow-xl stroke-black  shadow-black">
+          <p className="md:text-[18px] text-[15px] font-[500] drop-shadow-xl stroke-black  shadow-black">
             minutes
+          </p>
+        </div>
+        <div className="bg-[#4378F5] text-white w-[20vw] md:w-[12vw] leading-tight rounded-[1.5vw] text-center uppercase py-[0.2vw] shadow-black drop-shadow-xl">
+          <h1 className="text-[20px] md:text-[45px] font-[800] drop-shadow-xl stroke-black  shadow-black">
+            {timeLeft.seconds}
+          </h1>
+          <p className="md:text-[18px] text-[15px] font-[500] drop-shadow-xl stroke-black  shadow-black">
+            seconds
           </p>
         </div>
       </div>
