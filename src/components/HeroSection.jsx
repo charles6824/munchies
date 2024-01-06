@@ -41,7 +41,7 @@ const HeroSection = () => {
       }}
       className="w-[100%] h-[100vh] overflow-hidden  p-[2rem] md:p-[5.5rem] flex  items-start justify-between flex-col  "
     >
-      <h1 className="text-white  font-[800] text-[70px] md:text-[105px] leading-none md:leading-[7vw] font-poppins   shadow-black drop-shadow-2xl">
+      <h1 className="text-white  font-[800] text-[60px] md:text-[105px] leading-none md:leading-[7vw] font-poppins   shadow-black drop-shadow-2xl">
         Live <br /> Audience
       </h1>
 
@@ -95,7 +95,7 @@ const HeroSection = () => {
           VIEW VIDEO
         </button>
         <button className=" border-[1px] border-white rounded-[2vw] bg-transparent text-white md:w-[13vw] w-[40vw] py-[0.8vw] uppercase">
-          View Ticket options
+          View Ticket
         </button>
       </div>
     </div>
