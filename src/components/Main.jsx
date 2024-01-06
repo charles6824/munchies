@@ -422,16 +422,16 @@ const Main = () => {
 						</div>
 					</div>
 					<div className="socials flex flex-row gap-[2vw] justify-center pt-4">
-						<Link to="">
+						<Link to="https://www.instagram.com/munchies_thoughts/">
 							<FaInstagram size={30} />
 						</Link>
-						<Link to="">
+						<Link to="https://twitter.com/munchies_za">
 							<FaX size={30} />
 						</Link>
-						<Link to="">
+						<Link to="https://web.facebook.com/Munchiesandthought/">
 							<FaFacebook size={30} />
 						</Link>
-						<Link to="">
+						<Link to="#">
 							<FaLinkedin size={30} />
 						</Link>
 					</div>
