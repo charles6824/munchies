@@ -90,11 +90,11 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="space-x-[3vw] uppercase mt-[1.5vw]">
-        <button className=" border-[1px] border-white rounded-[2vw] bg-transparent text-white md:w-[13vw] w-[40vw] py-[0.8vw]">
+      <div className="space-x-[2vw] uppercase mt-[1.5vw]">
+        <button className=" border-[1px] border-white rounded-[2vw] bg-transparent text-white md:w-[13vw] w-[30vw] py-[0.8vw]">
           VIEW VIDEO
         </button>
-        <button className=" border-[1px] border-white rounded-[2vw] bg-transparent text-white md:w-[13vw] w-[40vw] py-[0.8vw] uppercase">
+        <button className=" border-[1px] border-white rounded-[2vw] bg-transparent text-white md:w-[13vw] w-[30vw] py-[0.8vw] uppercase">
           View Ticket
         </button>
       </div>
