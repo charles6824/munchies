@@ -5,6 +5,7 @@ import Preloader from './loader/Preloader'
 
 import { ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Merchandise from './screens/Merchandise';
 
 
 const HomePage = Loadable({
@@ -20,6 +21,7 @@ const App = () => {
       <Router>
         <Routes>
         <Route path="/" element={<HomePage />} exact />
+        <Route path="/merchandise" element={<Merchandise />} exact />
        
         </Routes>
       </Router>
