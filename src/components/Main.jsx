@@ -190,7 +190,7 @@ const Main = () => {
 										<h3>Africa Month</h3>
 										<br />
 										<p className="pb-3 pt-1">Mon 27th May | Gauteng</p>
-										<h3>From R250.00</h3>
+										{/* <h3>From R250.00</h3> */}
 									</div>
 								</div>
 							</div>
@@ -201,7 +201,7 @@ const Main = () => {
 										<h3>Cultural Heritage</h3>
 										<br />
 										<p className="pb-3 pt-1">Sun 22nd Sept | Gauteng</p>
-										<h3>From R450.00</h3>
+										{/* <h3>From R450.00</h3> */}
 									</div>
 								</div>
 							</div>
@@ -212,13 +212,13 @@ const Main = () => {
 					<div className="container">
 						<div className="flex justify-between">
 							<h3 className="text-white mt-2 ">
-								Take part in our giveaway and win a free ticket
+							Elevate Your Brand with Munchies and Thoughts Merchandise Collaboration!
 							</h3>
 							<Link
-								to={""}
+								to={"https://munchiesandthoughts.simplybook.me/v2/"}
 								className="shop rounded-[1vw] bg-[#F6D95C] text-black font-poppins py-[0.7vw] px-[1.7vw] uppercase d-none d-md-block"
 							>
-								shop gift
+								Book A Call
 							</Link>
 						</div>
 					</div>
@@ -368,7 +368,7 @@ const Main = () => {
 								'On My Own' by Phathanani Mbatha
 							</h3>
 							<Link
-								to={"#"}
+								to={"https://wa.link/oq9tvl"}
 								className="shop rounded-[2vw] bg-[#F6D95C] text-black font-poppins md:py-[0.7vw] md:px-[2.5vw] uppercase"
 							>
 								Get Your Copy Today!

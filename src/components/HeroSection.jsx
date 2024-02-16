@@ -6,7 +6,7 @@ const HeroSection = () => {
 
   const calculateTimeLeft = () => {
     const now = new Date();
-    const difference = new Date("2024-02-23T00:00:00") - now;
+    const difference = new Date("2024-03-17T00:00:00") - now;
 
     let timeLeft = {};
 
