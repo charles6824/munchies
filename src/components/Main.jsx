@@ -210,13 +210,20 @@ const Main = () => {
 				</section>
 				<section className="give-away py-[2rem] bg-[#4378F5]">
 					<div className="container">
-						<div className="flex justify-between">
+						<div className="md:flex md:justify-between">
 							<h3 className="text-white mt-2 ">
-							Elevate Your Brand with Munchies and Thoughts Merchandise Collaboration!
+								Elevate Your Brand with Munchies and Thoughts Merchandise
+								Collaboration!
 							</h3>
 							<Link
 								to={"https://munchiesandthoughts.simplybook.me/v2/"}
 								className="shop rounded-[1vw] bg-[#F6D95C] text-black font-poppins py-[0.7vw] px-[1.7vw] uppercase d-none d-md-block"
+							>
+								Book A Call
+							</Link>
+							<Link
+								to={"https://munchiesandthoughts.simplybook.me/v2/"}
+								className="shop rounded-[1vw] bg-[#F6D95C] text-black text-center uppercase d-block d-md-none"
 							>
 								Book A Call
 							</Link>
